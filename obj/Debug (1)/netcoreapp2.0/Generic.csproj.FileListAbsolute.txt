@@ -1,0 +1,10 @@
+D:\GDrive\GameDev\c#Projects\Generic\obj\Debug\netcoreapp2.0\Generic.csproj.CoreCompileInputs.cache
+D:\GDrive\GameDev\c#Projects\Generic\obj\Debug\netcoreapp2.0\Generic.AssemblyInfoInputs.cache
+D:\GDrive\GameDev\c#Projects\Generic\obj\Debug\netcoreapp2.0\Generic.AssemblyInfo.cs
+D:\GDrive\GameDev\c#Projects\Generic\bin\Debug\netcoreapp2.0\Generic.deps.json
+D:\GDrive\GameDev\c#Projects\Generic\bin\Debug\netcoreapp2.0\Generic.runtimeconfig.json
+D:\GDrive\GameDev\c#Projects\Generic\bin\Debug\netcoreapp2.0\Generic.runtimeconfig.dev.json
+D:\GDrive\GameDev\c#Projects\Generic\bin\Debug\netcoreapp2.0\Generic.dll
+D:\GDrive\GameDev\c#Projects\Generic\bin\Debug\netcoreapp2.0\Generic.pdb
+D:\GDrive\GameDev\c#Projects\Generic\obj\Debug\netcoreapp2.0\Generic.dll
+D:\GDrive\GameDev\c#Projects\Generic\obj\Debug\netcoreapp2.0\Generic.pdb
