@@ -1,5 +1,6 @@
 *.so
 *.csproj
+*.user
 *.sln
 *.log
 .vscode/
