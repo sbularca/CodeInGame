@@ -1,0 +1,9 @@
+*.so
+*.csproj
+*.sln
+*.log
+.vscode/
+.vs/
+Temp/
+.DS_Store/
+bin/

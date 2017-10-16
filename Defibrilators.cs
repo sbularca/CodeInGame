@@ -84,9 +84,9 @@ namespace CodeInGame
         }
         
 
-        public float CalculateDistance(float longitude, float latitude, int nrFibrilators)
+       /* public float CalculateDistance(float longitude, float latitude, int nrFibrilators)
         {
 
-        }
+        }*/
     }
 }
