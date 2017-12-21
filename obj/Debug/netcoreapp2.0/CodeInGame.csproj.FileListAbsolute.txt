@@ -1,0 +1,11 @@
+/Users/sebastianbularca/__TocaBocaReps/CodeInGame/obj/Debug/netcoreapp2.0/CodeInGame.csproj.CoreCompileInputs.cache
+/Users/sebastianbularca/__TocaBocaReps/CodeInGame/obj/Debug/netcoreapp2.0/CodeInGame.AssemblyInfoInputs.cache
+/Users/sebastianbularca/__TocaBocaReps/CodeInGame/obj/Debug/netcoreapp2.0/CodeInGame.AssemblyInfo.cs
+/Users/sebastianbularca/__TocaBocaReps/CodeInGame/obj/Debug/netcoreapp2.0/CodeInGame.csprojResolveAssemblyReference.cache
+/Users/sebastianbularca/__TocaBocaReps/CodeInGame/bin/Debug/netcoreapp2.0/CodeInGame.deps.json
+/Users/sebastianbularca/__TocaBocaReps/CodeInGame/bin/Debug/netcoreapp2.0/CodeInGame.runtimeconfig.json
+/Users/sebastianbularca/__TocaBocaReps/CodeInGame/bin/Debug/netcoreapp2.0/CodeInGame.runtimeconfig.dev.json
+/Users/sebastianbularca/__TocaBocaReps/CodeInGame/bin/Debug/netcoreapp2.0/CodeInGame.dll
+/Users/sebastianbularca/__TocaBocaReps/CodeInGame/bin/Debug/netcoreapp2.0/CodeInGame.pdb
+/Users/sebastianbularca/__TocaBocaReps/CodeInGame/obj/Debug/netcoreapp2.0/CodeInGame.dll
+/Users/sebastianbularca/__TocaBocaReps/CodeInGame/obj/Debug/netcoreapp2.0/CodeInGame.pdb
