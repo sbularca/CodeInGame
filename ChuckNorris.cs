@@ -55,20 +55,5 @@ namespace CodeInGame
 
             UnarCoding();
         }
-
-        /*static void Main(string[] args)
-        {
-            string MESSAGE = Console.ReadLine();
-
-            string encode = MESSAGE.Select(x => (int)x)
-                .Select(x => Convert.ToString(x, 2).PadLeft(7, '0'))
-                .Aggregate((x,y) => x + y);
-
-            encode = Regex.Replace(encode, @"(0+)", "00 $1 ");
-            encode = Regex.Replace(encode, @"(1+)", "0 $1 ")
-                        .Replace("1","0");
-
-            Console.WriteLine(encode.TrimEnd());
-        }*/
     }
 }
