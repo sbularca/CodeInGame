@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using CodeInGame;
+using System.Reflection;
 
 public class MainMenu {
     public static void Main (string [] args) {
@@ -20,21 +21,27 @@ public class MainMenu {
 
         switch (response) {
             case "1":
+                Console.WriteLine("Executing " + $"{nameof(AsciiArt.AsciiArtSolution)}");            
                 AsciiArt.AsciiArtSolution();
                 break;
             case "2":
+                Console.WriteLine("Executing " + $"{nameof(ChuckNorris.UnarCoding)}");            
                 ChuckNorris.UnarCoding();
                 break;
             case "3":
+                Console.WriteLine("Executing " + $"{nameof(MimeTypes.FindMimeType)}");            
                 MimeTypes.FindMimeType();
                 break;
             case "4":
+                Console.WriteLine("Executing " + $"{nameof(Defibrilators.FindDefibrilator)}");                
                 Defibrilators.FindDefibrilator();
                 break;
             case "5":
+                Console.WriteLine("Executing " + $"{nameof(HorseRacing.FindPowerDiff)}");
                 HorseRacing.FindPowerDiff();
                 break;
             case "6":
+                Console.WriteLine("Executing " + $"{nameof(NoSpoon.ThereIsNoSpoon)}");
                 NoSpoon.ThereIsNoSpoon();
                 break;
             case "x":
