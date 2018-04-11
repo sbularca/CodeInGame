@@ -20,33 +20,36 @@ namespace CodeInGame {
         public static NoSpoon noSpoon;
 
         public NoSpoon () {
-            Height = 2; // row
-            Width = 2; //  col
+            Height = 3; // row
+            Width = 3; //  col
             NodeData = new char [,] {
-                    {'0', '0'},
-                    {'0', '.'}
+                    {'0', '.', '0'},
+                    {'.', '.', '.'},
+                    {'0', '.', '0'}
                 };
-            Down = "-1 -1";
-            Right = "-1 -1 ";
+            Down = "-1 -1 ";
+            Right = "-1 -1";
             Result = "No result achieved...";
             CurrentNode = "-1 -1 ";
         }
 
         public static void ThereIsNoSpoon () {
             noSpoon = new NoSpoon();
+            noSpoon.NodeData = noSpoon.Transpose(noSpoon.NodeData);
 
-            for (int i = 0 ; i < noSpoon.Height ; i++) {
-                for (int j=0; j<noSpoon.Width; j++){
+            for (int i = 0 ; i < noSpoon.Width ; i++) {
+                for (int j=0; j<noSpoon.Height; j++){
                     if (noSpoon.isNode(i, j)){
-                        noSpoon.CurrentNode = j.ToString() + " " + i.ToString() + " ";
+                        noSpoon.CurrentNode = i.ToString() + " " + j.ToString() + " ";
                         noSpoon.Right = noSpoon.CheckRight(i, j);
                         noSpoon.Down = noSpoon.CheckDown(i, j);
-                        noSpoon.Result = noSpoon.CurrentNode + noSpoon.Right + noSpoon.Down;
+                        noSpoon.Result = noSpoon.CurrentNode + noSpoon.Down + noSpoon.Right;
                         Console.WriteLine(noSpoon.Result);
                     }
                 }
             }
-
+            
+            Console.WriteLine("\nPress Ctrl+X to go back to menu.");
             ConsoleKeyInfo cki = Console.ReadKey();
             if ((cki.Modifiers & ConsoleModifiers.Control) != 0 && cki.Key == ConsoleKey.X) {
                 MainMenu.Main(null);
@@ -56,22 +59,22 @@ namespace CodeInGame {
         }
 
         string CheckRight (int row, int col) {
-            string result = "-1 -1 ";
-            if (col < (noSpoon.Width - 1)){
-                for (int i=col+1; i<noSpoon.Width; i++){
+            string result = "-1 -1";
+            if (col < (noSpoon.Height - 1)){
+                for (int i=col+1; i<noSpoon.Height; i++){
                     if (isNode(row, i))
-                        result = i.ToString() + " " + row.ToString() + " ";
+                        return result = row.ToString() + " " + i.ToString();
                 }
             }
             return result;
         }
 
         string CheckDown (int row, int col) {
-            string result = "-1 -1";
-            if (row < (noSpoon.Height - 1)){
-                for (int i=col+1; i<noSpoon.Height; i++){
+            string result = "-1 -1 ";
+            if (row < (noSpoon.Width - 1)){
+                for (int i=col+1; i<noSpoon.Width; i++){
                     if (isNode(i, col))
-                        result = col.ToString() + " " + i.ToString();
+                        return result = i.ToString() + " " + col.ToString() + " ";
                 }
             }
             return result;
@@ -81,6 +84,24 @@ namespace CodeInGame {
             if (noSpoon.NodeData[row, col] == '0')
                 return true;
             return false;
+        }
+
+        char[,] Transpose(char[,] matrix)
+        {
+            int w = matrix.GetLength(0);
+            int h = matrix.GetLength(1);
+        
+            char[,] result = new char[h, w];
+        
+            for (int i = 0; i < w; i++)
+            {
+                for (int j = 0; j < h; j++)
+                {
+                    result[j, i] = matrix[i, j];
+                }
+            }
+        
+            return result;
         }
     }
 }
