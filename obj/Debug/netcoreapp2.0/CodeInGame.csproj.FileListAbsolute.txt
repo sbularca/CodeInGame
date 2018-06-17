@@ -9,3 +9,14 @@
 /Users/sebastianbularca/__TocaBocaReps/CodeInGame/bin/Debug/netcoreapp2.0/CodeInGame.pdb
 /Users/sebastianbularca/__TocaBocaReps/CodeInGame/obj/Debug/netcoreapp2.0/CodeInGame.dll
 /Users/sebastianbularca/__TocaBocaReps/CodeInGame/obj/Debug/netcoreapp2.0/CodeInGame.pdb
+D:\GDrive\GameDev\c#Projects\CodeInGame\bin\Debug\netcoreapp2.0\CodeInGame.deps.json
+D:\GDrive\GameDev\c#Projects\CodeInGame\bin\Debug\netcoreapp2.0\CodeInGame.runtimeconfig.json
+D:\GDrive\GameDev\c#Projects\CodeInGame\bin\Debug\netcoreapp2.0\CodeInGame.runtimeconfig.dev.json
+D:\GDrive\GameDev\c#Projects\CodeInGame\bin\Debug\netcoreapp2.0\CodeInGame.dll
+D:\GDrive\GameDev\c#Projects\CodeInGame\bin\Debug\netcoreapp2.0\CodeInGame.pdb
+D:\GDrive\GameDev\c#Projects\CodeInGame\obj\Debug\netcoreapp2.0\CodeInGame.csprojAssemblyReference.cache
+D:\GDrive\GameDev\c#Projects\CodeInGame\obj\Debug\netcoreapp2.0\CodeInGame.csproj.CoreCompileInputs.cache
+D:\GDrive\GameDev\c#Projects\CodeInGame\obj\Debug\netcoreapp2.0\CodeInGame.AssemblyInfoInputs.cache
+D:\GDrive\GameDev\c#Projects\CodeInGame\obj\Debug\netcoreapp2.0\CodeInGame.AssemblyInfo.cs
+D:\GDrive\GameDev\c#Projects\CodeInGame\obj\Debug\netcoreapp2.0\CodeInGame.dll
+D:\GDrive\GameDev\c#Projects\CodeInGame\obj\Debug\netcoreapp2.0\CodeInGame.pdb
