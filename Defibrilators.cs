@@ -66,7 +66,7 @@ namespace CodeInGame
     {
         public static void FindDefibrilator()
         {
-            string LON = Console.ReadLine().Replace(',', '.');
+            /*string LON = Console.ReadLine().Replace(',', '.');
             string LAT = Console.ReadLine().Replace(',', '.');
             int N = int.Parse(Console.ReadLine());
     
@@ -78,9 +78,19 @@ namespace CodeInGame
 
             
             // Write an action using Console.WriteLine()
-            // To debug: Console.Error.WriteLine("Debug messages...");
+            // To debug: Console.Error.WriteLine("Debug messages...");*/
 
-            Console.WriteLine("answer");
+            Console.WriteLine("Program incomplete...");
+
+            Console.WriteLine("\nPress Ctrl+X to go back to menu.");
+
+            ConsoleKeyInfo cki = Console.ReadKey();
+            if ((cki.Modifiers & ConsoleModifiers.Control) != 0 && cki.Key == ConsoleKey.X)
+            {
+                MainMenu.Main(null);
+            }
+
+            FindDefibrilator();
         }
         
 

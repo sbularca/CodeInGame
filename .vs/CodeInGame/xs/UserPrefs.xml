@@ -1,9 +1,22 @@
 ﻿<Properties StartupConfiguration="{0EAEA256-525A-45D0-9F45-D463B2AA2693}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="InventorySystemSE.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HorseRacing.cs">
     <Files>
       <File FileName="AsciiArt.cs" Line="1" Column="1" />
-      <File FileName="InventorySystemSE.cs" Line="54" Column="15" />
+      <File FileName="Defibrilators.cs" Line="83" Column="53" />
+      <File FileName="MainMenu.cs" Line="27" Column="22" />
+      <File FileName="HorseRacing.cs" Line="16" Column="40" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CodeInGame" expanded="True">
+            <Node name="CodeInGame" expanded="True">
+              <Node name="HorseRacing.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,10 +1,4 @@
-*.so
-*.csproj
-*.user
-*.sln
-*.log
-.vscode/
-.vs/
+bin/
+obj/
 Temp/
 .DS_Store/
-bin/
