@@ -664,23 +664,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/sebastianbularca/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Sebastian Bularca\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/sebastianbularca/__TocaBocaReps/CodeInGame/CodeInGame.csproj",
+      "projectUniqueName": "D:\\GDrive\\GameDev\\c#Projects\\CodeInGame\\CodeInGame.csproj",
       "projectName": "CodeInGame",
-      "projectPath": "/Users/sebastianbularca/__TocaBocaReps/CodeInGame/CodeInGame.csproj",
-      "packagesPath": "/Users/sebastianbularca/.nuget/packages/",
-      "outputPath": "/Users/sebastianbularca/__TocaBocaReps/CodeInGame/obj/",
+      "projectPath": "D:\\GDrive\\GameDev\\c#Projects\\CodeInGame\\CodeInGame.csproj",
+      "packagesPath": "C:\\Users\\Sebastian Bularca\\.nuget\\packages\\",
+      "outputPath": "D:\\GDrive\\GameDev\\c#Projects\\CodeInGame\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/sebastianbularca/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Sebastian Bularca\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
