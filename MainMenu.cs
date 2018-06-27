@@ -44,6 +44,10 @@ public class MainMenu {
                 Console.WriteLine("Executing " + $"{nameof(NoSpoon.ThereIsNoSpoon)}");
                 NoSpoon.ThereIsNoSpoon();
                 break;
+            case "7":
+                Console.WriteLine("Executing " + $"{nameof(SkyNet.SkyNetRevolutionOne)}");
+                NoSpoon.ThereIsNoSpoon();
+                break;
             case "x":
                 Environment.Exit(0);
                 break;

@@ -23,7 +23,7 @@ namespace CodeInGame {
                 int N2 = int.Parse(inputs [1]);
             }*/
 
-            int [,] link = new int [,] { {0, 1}, {0, 2}, {1, 3}, {2, 3} };
+            int [][] link = new int [][] { new int[]{1, 2}, new int [] {3}, new int [] {3} };
             int [] exits = new int[1];
 
             /*for (int i = 0 ; i < E ; i++) {
@@ -31,13 +31,16 @@ namespace CodeInGame {
             }*/
 
             // game loop
-            while (true) {
+ //           while (true) {
                 ConsoleKeyInfo key = Console.ReadKey();
-
                 int SI = int.Parse(key.KeyChar.ToString()); // The index of the node on which the Skynet agent is positioned this turn
 
+                int nodeOne = link[0][1];
+
+                Console.WriteLine (nodeOne);
+
                 Console.WriteLine("0 1");
-            }
+ //           }
 
             Console.WriteLine("\nPress Ctrl+X to go back to menu.");
             ConsoleKeyInfo cki = Console.ReadKey();
