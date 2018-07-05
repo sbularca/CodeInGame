@@ -13,7 +13,6 @@ namespace CodeInGame
 
         public static void SkyNetRevolutionOne ()
         {
-
                 string [] inputs;
                 inputs = Console.ReadLine().Split(' ');
                 int N = int.Parse(inputs [0]); // the total number of nodes in the level, including the gateways
@@ -33,76 +32,63 @@ namespace CodeInGame
                     int N1 = int.Parse(inputs [0]); // N1 and N2 defines a link between these nodes
                     int N2 = int.Parse(inputs [1]);
                     nodes[N1].links.Add(N2);
-                    nodes[N2].links.Add(N2);
+                    nodes[N2].links.Add(N1);
                 }
 
                 for (int i = 0 ; i < E ; i++)
                 {
                     int EI = int.Parse(Console.ReadLine()); // the index of a gateway node
-                    nodes[EI].hasData = true;
+                    nodes.FirstOrDefault(x => x.data == EI).hasData = true;
                     Console.Error.WriteLine(EI);
                 }
 
-                //Console.WriteLine("\nPress Ctrl+X to go back to menu.");
+            Console.WriteLine("\nPress Ctrl+X to go back to menu.");
 
-                // game loop
-                while (true)
+            // game loop
+            while (true)
+            {
+                int agentNode = int.Parse(Console.ReadLine()); // The index of the node on which the Skynet agent is positioned this turn
+                int indexOfAgentNode = Array.IndexOf(nodes, nodes.FirstOrDefault(x => x.data == agentNode));
+
+                if (nodes [indexOfAgentNode].links.Count > 0)
                 {
-                    int agentIndex = int.Parse(Console.ReadLine()); // The index of the node on which the Skynet agent is positioned this turn
+                    string linkToCut = null;
 
-                    if (nodes[agentIndex].links.Count > 0)
+                    int valueOfAgentNode = nodes [indexOfAgentNode].data;
+
+                    Console.Error.WriteLine("Agent node index is:" + indexOfAgentNode);
+
+                    for (int i = 0 ; i < nodes [indexOfAgentNode].links.Count ; i++)
                     {
-                        string linkToCut = SearchTree(nodes.ToList(), agentIndex);
+                        int valueOfNodeToCheck = nodes [indexOfAgentNode].links [i];
+                        linkToCut = valueOfNodeToCheck + " " + valueOfAgentNode;
 
-                        if (linkToCut != null)
-                            Console.WriteLine(linkToCut);
+                         Console.Error.WriteLine("Node checked is: " + valueOfNodeToCheck);
+                        if (nodes.FirstOrDefault(x => x.data == valueOfNodeToCheck).hasData)
+                        {
+                            Console.Error.WriteLine("Gateway is:" + valueOfNodeToCheck);
+                            //Console.WriteLine(linkToCut);
+                            break;
+                        }
                     }
-
-                    /*ConsoleKeyInfo cki = Console.ReadKey();
-                    if ((cki.Modifiers & ConsoleModifiers.Control) != 0 && cki.Key == ConsoleKey.X)
-                    {
-                        MainMenu.Main(null);
-                    } else
-                    SkyNetRevolutionOne();  */  
-                }           
-        }
-
-        private static string SearchTree (List<Node<bool>> nodesList, int agentIndex)
-        {
-            string linkToCut = null;
-            int nodeToCheckIndex = agentIndex;
-            int gatewayIndex = 0;
-            Console.Error.WriteLine(nodesList[agentIndex].links.Count);
-
-            for (int i = 0 ; i < nodesList[agentIndex].links.Count ; i++)
-            {   
-
-                nodeToCheckIndex = nodesList[agentIndex].links[i];
-                linkToCut = nodeToCheckIndex + " " + agentIndex;
-                
-                if (HasGateway(nodesList[nodeToCheckIndex]))
-                {
-                    gatewayIndex = nodeToCheckIndex;
-                    linkToCut = gatewayIndex + " " + agentIndex;
+                    Console.WriteLine(linkToCut);
                 }
-            }
-            return linkToCut;
-        }
 
-        private static bool HasGateway (Node<bool> node)
-        {
-            if (node.data)
-                return true;
-            return false;
+                ConsoleKeyInfo cki = Console.ReadKey();
+                if ((cki.Modifiers & ConsoleModifiers.Control) != 0 && cki.Key == ConsoleKey.X)
+                {
+                    MainMenu.Main(null);
+                } else
+                SkyNetRevolutionOne();
+            }           
         }
-
     }
 
     public class Node<T>
     {
         public T data;
-        public bool hasData;
-        public List<int> links;
+        public bool hasData = false;
+        public List<int> links = new List<int>();
     }
 
 }
