@@ -52,7 +52,7 @@ namespace CodeInGame
                 switch (bombDir)
                 {
                     case "U":
-                        float coord = currentPosition[1] - (SpecialCase(currentPosition[1], prevUpPos[1]) / 2);
+                        float coord = currentPosition[1] - (SpecialCase(currentPosition[1], (prevUpPos[1] - 1)) / 2);
                         height = (int)Math.Round(coord);
                         width = currentPosition[0];
                         prevDownPos[1] = currentPosition[1];
@@ -63,7 +63,7 @@ namespace CodeInGame
                         prevRightPos[1] = currentPosition[1];
                         break;
                     case "UR":
-                        coord = currentPosition[1] - (SpecialCase(currentPosition[1], prevUpPos[1]) / 2);
+                        coord = currentPosition[1] - (SpecialCase(currentPosition[1], (prevUpPos[1] - 1)) / 2);
                         height = (int)Math.Round(coord);
                         coord = currentPosition[0] + (SpecialCase(prevRightPos[0], currentPosition[0]) / 2);
                         width = (int)Math.Round(coord);
@@ -107,7 +107,7 @@ namespace CodeInGame
                     case "DL":
                         coord = currentPosition[1] + (SpecialCase(prevDownPos[1], currentPosition[1]) / 2);
                         height = (int)Math.Round(coord);
-                        coord = currentPosition[0] - (SpecialCase(currentPosition[0], prevLeftPos[0]) / 2);
+                        coord = currentPosition[0] - (SpecialCase(currentPosition[0], (prevLeftPos[0] - 1)) / 2);
                         width = (int)Math.Round(coord);
                         prevUpPos[1] = currentPosition[1];
                         prevUpPos[0] = currentPosition[0];
@@ -115,7 +115,7 @@ namespace CodeInGame
                         prevRightPos[1] = currentPosition[1];
                         break;
                     case "L":
-                        coord = currentPosition[0] - (SpecialCase(currentPosition[0], prevLeftPos[0]) / 2);
+                        coord = currentPosition[0] - (SpecialCase(currentPosition[0], (prevLeftPos[0] - 1)) / 2);
                         height = currentPosition[1];
                         width = (int)Math.Round(coord);
                         prevRightPos[0] = currentPosition[0];
@@ -126,9 +126,10 @@ namespace CodeInGame
                         prevUpPos[0] = currentPosition[0];
                         break;
                     case "UL":
-                        coord = currentPosition[1] - (SpecialCase(currentPosition[1], prevUpPos[1]) / 2);
+                        coord = currentPosition[1] - (SpecialCase(currentPosition[1], (prevUpPos[1] - 1)) / 2);
                         height = (int)Math.Floor(coord);
-                        coord = currentPosition[0] - (SpecialCase(currentPosition[0], prevLeftPos[0]) / 2);
+                        coord = currentPosition[0] - (SpecialCase(currentPosition[0], (prevLeftPos[0] - 1)) / 2);
+                        Console.Error.WriteLine(currentPosition[0] + " " + prevLeftPos[0] + " " + SpecialCase(currentPosition[0], prevLeftPos[0]) + " " + coord);
                         width = (int)Math.Round(coord);
                         prevRightPos[0] = currentPosition[0];
                         prevRightPos[1] = currentPosition[1];
