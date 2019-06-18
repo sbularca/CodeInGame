@@ -2,6 +2,8 @@ bin/
 obj/
 Temp/
 .DS_Store/
+.vscode/
+.vs/
 .vs/CodeInGame/v15/Server/sqlite3/storage.ide-wal
 .vs/CodeInGame/v15/Server/sqlite3/storage.ide-shm
 .vs/CodeInGame/v15/Server/sqlite3/storage.ide
