@@ -12,9 +12,7 @@ using System.Collections.Generic;
 class Solution
 {
     static void Main(string[] args)
-    {
-        Solution solution = new Solution();
-        int speedLimit = int.Parse(Console.ReadLine());
+    {   int speedLimit = int.Parse(Console.ReadLine());
         int lightCount = int.Parse(Console.ReadLine());
         
         bool hasPassed = false;
