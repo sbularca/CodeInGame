@@ -4,12 +4,9 @@ using System.Collections.Generic;
 using CodeInGame;
 using System.Reflection;
 
-namespace CodeInGame
-{
-    public class MainMenu
-    {
-        public static void Main(string[] args)
-        {
+namespace CodeInGame {
+    public class MainMenu {
+        public static void Main(string[] args) {
             string response = null;
             Console.Clear();
             Console.WriteLine("1 - AsciiArt");
@@ -18,13 +15,14 @@ namespace CodeInGame
             Console.WriteLine("4 - Find Defibrilator");
             Console.WriteLine("5 - Find smallest power");
             Console.WriteLine("6 - Find next node");
+            Console.WriteLine("7 - SkyNetRevolution One");
+            Console.WriteLine("8 - Genetic Algorithm");
             Console.WriteLine("x - Terminate program");
 
             //FlushKeyboard();
             response = Console.ReadLine();
 
-            switch (response)
-            {
+            switch(response) {
                 case "1":
                     Console.WriteLine("Executing " + $"{nameof(AsciiArt.AsciiArtSolution)}");
                     AsciiArt.AsciiArtSolution();
@@ -53,6 +51,10 @@ namespace CodeInGame
                     Console.WriteLine("Executing " + $"{nameof(SkyNet.SkyNetRevolutionOne)}");
                     NoSpoon.ThereIsNoSpoon();
                     break;
+                case "8":
+                    Console.WriteLine("Executing " + $"{nameof(GeneticAlgorithm)}");
+                    GeneticAlgorithm.Execute();
+                    break;
                 case "x":
                     Environment.Exit(0);
                     break;
@@ -60,11 +62,13 @@ namespace CodeInGame
                     Main(null);
                     break;
             }
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+            Main(null);
         }
 
-        public static void FlushKeyboard()
-        {
-            while (Console.In.Peek() != -1)
+        public static void FlushKeyboard() {
+            while(Console.In.Peek() != -1)
                 Console.In.Read();
         }
     }

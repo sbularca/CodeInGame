@@ -9,17 +9,15 @@ using System.Collections.Generic;
  * Auto-generated code below aims at helping you parse
  * the standard input according to the problem statement.
  **/
-class Solution
-{
-    static void Main(string[] args)
-    {   int speedLimit = int.Parse(Console.ReadLine());
+class Aneo {
+    public static void Execute() {
+        int speedLimit = int.Parse(Console.ReadLine());
         int lightCount = int.Parse(Console.ReadLine());
-        
-        bool hasPassed = false;
-        Dictionary <int, int> distanceWithDuration = new Dictionary<int, int>();
 
-        for (int i = 0; i < lightCount; i++)
-        {
+        bool hasPassed = false;
+        Dictionary<int, int> distanceWithDuration = new Dictionary<int, int>();
+
+        for(int i = 0; i < lightCount; i++) {
             string[] inputs = Console.ReadLine().Split(' ');
             int distance = int.Parse(inputs[0]);
             int duration = int.Parse(inputs[1]);
@@ -27,30 +25,24 @@ class Solution
             distanceWithDuration.Add(distance, duration);
         }
 
-        while (speedLimit > 0 && !hasPassed)
-        {
-            foreach (var trafficLight in distanceWithDuration)
-            {
+        while(speedLimit > 0 && !hasPassed) {
+            foreach(var trafficLight in distanceWithDuration) {
                 float result = ((((float)trafficLight.Key / 1000) / (float)speedLimit) * 3600) / (float)(trafficLight.Value);
 
                 //increasing the error margin to make sure it doesn't fail on large data entries
-                if (Math.Truncate((float)Math.Round(result * 100f) / 100f) % 2 != 0)
-                {
+                if(Math.Truncate((float)Math.Round(result * 100f) / 100f) % 2 != 0) {
                     hasPassed = false;
                     break;
                 }
-                else 
-                {
+                else {
                     hasPassed = true;
                 }
             }
 
-            if (hasPassed)
-            {
+            if(hasPassed) {
                 break;
             }
-            else
-            {
+            else {
                 speedLimit--;
             }
         }

@@ -9,24 +9,20 @@ using System.Collections.Generic;
  * Auto-generated code below aims at helping you parse
  * the standard input according to the problem statement.
  **/
-class MarsLanderTwo
-{
-    static void Main(string[] args)
-    {
+class MarsLanderTwo {
+    public static void Execute() {
         string[] inputs;
         int surfaceN = int.Parse(Console.ReadLine()); // the number of points used to draw the surface of Mars.
         float maxSpeed = 40;
-        
-        for (int i = 0; i < surfaceN; i++)
-        {
+
+        for(int i = 0; i < surfaceN; i++) {
             inputs = Console.ReadLine().Split(' ');
             int landX = int.Parse(inputs[0]); // X coordinate of a surface point. (0 to 6999)
             int landY = int.Parse(inputs[1]); // Y coordinate of a surface point. By linking all the points together in a sequential fashion, you form the surface of Mars.
         }
 
         // game loop
-        while (true)
-        {
+        while(true) {
             inputs = Console.ReadLine().Split(' ');
             int X = int.Parse(inputs[0]);
             int Y = int.Parse(inputs[1]);
@@ -38,17 +34,17 @@ class MarsLanderTwo
 
             // Write an action using Console.WriteLine()
             // To debug: Console.Error.WriteLine("Debug messages...");
-            
+
             vSpeed = Math.Abs(vSpeed);
 
-            float time = vSpeed>0 ? Y/vSpeed : time=0;
-            float idealTime = Y/maxSpeed;
+            float time = vSpeed > 0 ? Y / vSpeed : time = 0;
+            float idealTime = Y / maxSpeed;
 
-            if (time < idealTime) power++;
-            if (time > idealTime) power--;
+            if(time < idealTime) power++;
+            if(time > idealTime) power--;
 
-            if (power > 4) power=4;
-            if (power < 0) power=0;
+            if(power > 4) power = 4;
+            if(power < 0) power = 0;
 
             // rotate power. rotate is the desired rotation angle. power is the desired thrust power.
             Console.WriteLine("-20 3");
