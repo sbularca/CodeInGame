@@ -33,7 +33,7 @@ class MarsLanderTwo {
         }
     }
 
-    class Program {
+    class DemoSolution {
         public static Random random = new Random();
         public const int PopulationSize = 100;
         public const int GeneLength = 100;  // Number of commands in a solution
@@ -79,7 +79,7 @@ class MarsLanderTwo {
         }
     }
 
-    class State {
+    public class State {
         public double X, Y, HSpeed, VSpeed, Fuel, Rotation, Power;
 
         public State(double x, double y, double hSpeed, double vSpeed, double fuel, double rotation, double power) {
@@ -97,7 +97,7 @@ class MarsLanderTwo {
         }
     }
 
-    class Gene {
+    public class Gene {
         public int Rotation, Thrust;
         public static Random random = new Random();
 
@@ -111,7 +111,7 @@ class MarsLanderTwo {
         }
     }
 
-    class Solution {
+    public class Solution {
         public List<Gene> Genes;
         public double Fitness;
         public static Random random = new Random();
@@ -131,7 +131,7 @@ class MarsLanderTwo {
                 state.Fuel -= state.Power;
                 var rad = state.Rotation * (Math.PI / 180);
                 state.HSpeed += -Math.Sin(rad) * state.Power;
-                state.VSpeed += Math.Cos(rad) * state.Power - Program.Gravity;
+                state.VSpeed += Math.Cos(rad) * state.Power - DemoSolution.Gravity;
                 state.X += state.HSpeed;
                 state.Y += state.VSpeed;
                 if(state.Y <= 0) {
@@ -153,7 +153,7 @@ class MarsLanderTwo {
 
         public void Mutate() {
             for(int i = 0; i < Genes.Count; i++) {
-                if(Program.random.NextDouble() < Program.MutationRate) {
+                if(DemoSolution.random.NextDouble() < DemoSolution.MutationRate) {
                     Genes[i] = Gene.RandomGene();
                 }
             }
