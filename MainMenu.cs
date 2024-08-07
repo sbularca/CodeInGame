@@ -17,6 +17,7 @@ namespace CodeInGame {
             Console.WriteLine("6 - Find next node");
             Console.WriteLine("7 - SkyNetRevolution One");
             Console.WriteLine("8 - Genetic Algorithm");
+            Console.WriteLine("9 - MarsLanderTwo");
             Console.WriteLine("x - Terminate program");
 
             //FlushKeyboard();
@@ -54,6 +55,10 @@ namespace CodeInGame {
                 case "8":
                     Console.WriteLine("Executing " + $"{nameof(GeneticAlgorithm)}");
                     GeneticAlgorithm.Execute();
+                    break;
+                case "9":
+                    Console.WriteLine("Executing " + $"{nameof(MarsLanderTwo)}");
+                    MarsLanderTwo.Execute();
                     break;
                 case "x":
                     Environment.Exit(0);
