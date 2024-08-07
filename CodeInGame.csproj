@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <StartupObject>CodeInGame.MainMenu</StartupObject>
   </PropertyGroup>
   <ItemGroup>
@@ -19,5 +19,8 @@
     <Content Include="MainMenu.cs" />
     <Content Include="MimeTypes.cs" />
     <Content Include="MarsLanderTwo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Remove="Microsoft.NETCore.App" />
   </ItemGroup>
 </Project>
