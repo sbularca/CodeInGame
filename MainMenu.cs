@@ -7,8 +7,6 @@ using System.Reflection;
 namespace CodeInGame {
     public class MainMenu {
         public static void Main(string[] args) {
-            string response = null;
-            Console.Clear();
             Console.WriteLine("1 - AsciiArt");
             Console.WriteLine("2 - ChuckNorris");
             Console.WriteLine("3 - MimeTypes");
@@ -21,55 +19,52 @@ namespace CodeInGame {
             Console.WriteLine("x - Terminate program");
 
             //FlushKeyboard();
-            response = Console.ReadLine();
+            var response = Console.ReadKey();
 
-            switch(response) {
-                case "1":
+            switch(response.Key) {
+                case ConsoleKey.D1:
                     Console.WriteLine("Executing " + $"{nameof(AsciiArt.AsciiArtSolution)}");
                     AsciiArt.AsciiArtSolution();
                     break;
-                case "2":
+                case ConsoleKey.D2:
                     Console.WriteLine("Executing " + $"{nameof(ChuckNorris.UnarCoding)}");
                     ChuckNorris.UnarCoding();
                     break;
-                case "3":
+                case ConsoleKey.D3:
                     Console.WriteLine("Executing " + $"{nameof(MimeTypes.FindMimeType)}");
                     MimeTypes.FindMimeType();
                     break;
-                case "4":
+                case ConsoleKey.D4:
                     Console.WriteLine("Executing " + $"{nameof(Defibrilators.FindDefibrilator)}");
                     Defibrilators.FindDefibrilator();
                     break;
-                case "5":
+                case ConsoleKey.D5:
                     Console.WriteLine("Executing " + $"{nameof(HorseRacing.FindPowerDiff)}");
                     HorseRacing.FindPowerDiff();
                     break;
-                case "6":
+                case ConsoleKey.D6:
                     Console.WriteLine("Executing " + $"{nameof(NoSpoon.ThereIsNoSpoon)}");
                     NoSpoon.ThereIsNoSpoon();
                     break;
-                case "7":
+                case ConsoleKey.D7:
                     Console.WriteLine("Executing " + $"{nameof(SkyNet.SkyNetRevolutionOne)}");
                     NoSpoon.ThereIsNoSpoon();
                     break;
-                case "8":
+                    case ConsoleKey.D8:
                     Console.WriteLine("Executing " + $"{nameof(GeneticAlgorithm)}");
                     GeneticAlgorithm.Execute();
                     break;
-                case "9":
+                case ConsoleKey.D9:
                     Console.WriteLine("Executing " + $"{nameof(MarsLanderTwo)}");
                     MarsLanderTwo.Execute();
                     break;
-                case "x":
+                case ConsoleKey.X:
                     Environment.Exit(0);
                     break;
                 default:
-                    Main(null);
                     break;
             }
             Console.WriteLine("Press any key to continue...");
-            Console.ReadKey();
-            Main(null);
         }
 
         public static void FlushKeyboard() {

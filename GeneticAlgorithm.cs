@@ -81,35 +81,35 @@ class GeneticAlgorithm {
             }
         }
     }
-}
 
-class Individual {
-    public int[] Genes { get; private set; }
-    public double Fitness { get { return EvaluateFitness(); } }
+    class Individual {
+        public int[] Genes { get; private set; }
+        public double Fitness { get { return EvaluateFitness(); } }
 
-    public Individual() {
-        Genes = new int[10];
-        RandomizeGenes();
-    }
-
-    public Individual(Individual copyFrom) {
-        Genes = (int[])copyFrom.Genes.Clone();
-    }
-
-    private void RandomizeGenes() {
-        Random random = new Random();
-        for(int i = 0; i < Genes.Length; i++) {
-            Genes[i] = random.Next(2);
+        public Individual() {
+            Genes = new int[10];
+            RandomizeGenes();
         }
-    }
 
-    private double EvaluateFitness() {
-        int targetSum = 15;
-        int actualSum = Genes.Sum();
-        return 1.0 / (1 + Math.Abs(targetSum - actualSum));
-    }
+        public Individual(Individual copyFrom) {
+            Genes = (int[])copyFrom.Genes.Clone();
+        }
 
-    public override string ToString() {
-        return string.Join("", Genes) + " (" + Fitness + ")";
+        private void RandomizeGenes() {
+            Random random = new Random();
+            for(int i = 0; i < Genes.Length; i++) {
+                Genes[i] = random.Next(2);
+            }
+        }
+
+        private double EvaluateFitness() {
+            int targetSum = 15;
+            int actualSum = Genes.Sum();
+            return 1.0 / (1 + Math.Abs(targetSum - actualSum));
+        }
+
+        public override string ToString() {
+            return string.Join("", Genes) + " (" + Fitness + ")";
+        }
     }
 }
