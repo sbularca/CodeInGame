@@ -25,7 +25,7 @@ namespace CodeInGame
             }
 
             Console.Write("Text introduced: " + MESSAGE);
-            Console.Write("\nBinary represention: " + msgBinary);
+            Console.Write("\nBinary representation: " + msgBinary);
 
             foreach (char c in msgBinary)
             {
