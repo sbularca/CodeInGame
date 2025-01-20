@@ -10,3 +10,4 @@ Temp/
 .vs/CodeInGame/v15/Server/sqlite3/db.lock
 .vs/CodeInGame/v15/.suo
 .idea/
+Rust/codeingame/target/
