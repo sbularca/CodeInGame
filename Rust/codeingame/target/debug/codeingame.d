@@ -1,1 +1,1 @@
-D:\repos\CodeInGame\Rust\codeingame\target\debug\codeingame.exe: D:\repos\CodeInGame\Rust\codeingame\src\island_escape.rs D:\repos\CodeInGame\Rust\codeingame\src\main.rs D:\repos\CodeInGame\Rust\codeingame\src\six_degrees.rs
+D:\repos\CodeInGame\Rust\codeingame\target\debug\codeingame.exe: D:\repos\CodeInGame\Rust\codeingame\src\island_escape.rs D:\repos\CodeInGame\Rust\codeingame\src\main.rs D:\repos\CodeInGame\Rust\codeingame\src\pong.rs D:\repos\CodeInGame\Rust\codeingame\src\simple_programs.rs D:\repos\CodeInGame\Rust\codeingame\src\six_degrees.rs
